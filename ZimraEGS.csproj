@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!--<AppContextSwitchOverrides>Switch.System.Net.DontEnableSystemDefaultTlsVersions=false;Switch.System.Net.EnableSystemDefaultTlsVersions=true</AppContextSwitchOverrides>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Setup\XIndex.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.11" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="cfData.json" />
+  </ItemGroup>
+
+</Project>
